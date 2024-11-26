@@ -21,3 +21,28 @@ addItemBtn.addEventListener("click", () => {
     listItem.textContent = `Item ${itemList.children.length + 1}`;
     itemList.appendChild(listItem);
 });
+
+const hoverText = document.getElementById("hover-text");
+
+hoverText.addEventListener("mouseover", () => {
+    hoverText.style.color = "blue";
+});
+
+hoverText.addEventListener("mouseout", () => {
+    hoverText.style.color = "black";
+});
+
+const keyDisplay = document.getElementById("key-display");
+
+document.addEventListener("keydown", (event) => {
+    keyDisplay.textContent = `You pressed: ${event.key}`;
+});
+
+const clickBtn = document.getElementById("click-btn");
+const clickCount = document.getElementById("click-count");
+let count = 0;
+
+clickBtn.addEventListener("click", () => {
+    count++;
+    clickCount.textContent = `Clicks: ${count}`;
+});
